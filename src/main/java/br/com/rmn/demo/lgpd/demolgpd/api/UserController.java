@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.rmn.demo.lgpd.demolgpd.model.User;
 import br.com.rmn.demo.lgpd.demolgpd.service.UserService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 /**
  * UserController
@@ -34,5 +37,11 @@ public class UserController {
     public User getUserById(@PathVariable("id") int id) {
         return userService.getUserById(id);
     }
+
+    @PostMapping
+    public void addUser(@RequestBody User user) {
+        userService.addUser(user);
+    }
+    
 
 }

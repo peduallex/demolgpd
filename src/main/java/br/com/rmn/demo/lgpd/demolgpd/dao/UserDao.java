@@ -10,7 +10,7 @@ import br.com.rmn.demo.lgpd.demolgpd.model.User;
  */
 public interface UserDao {
 
-    int insertUser(String name, String password, String email, String phone);
+    int insertUser(User user);
 
     int updateUser(int id, User user);
 

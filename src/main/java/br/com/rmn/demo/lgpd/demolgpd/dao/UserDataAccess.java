@@ -30,9 +30,10 @@ public class UserDataAccess implements UserDao {
     }
 
     @Override
-    public int insertUser(final String name, final String password, final String email, final String phone) {
-        // TODO Auto-generated method stub
-        return 0;
+    public int insertUser(final User user ) {
+        final String sql = "INSERT INTO tb_user (userName, userPassword, email, phone) VALUES (?, ?, ?, ?)";
+        jdbcTemplate.update(sql, user.getName(), user.getPassword(), user.getEmail(), user.getPhone());
+        return 1;
     }
 
     @Override
