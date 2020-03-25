@@ -1,0 +1,7 @@
+app:
+    datasource:
+        jdbc-url: jdbc:sqlserver://localhost:1433;databaseName=demolgpd
+        username: sa
+        password: Dir@1978
+        poolsize: 30
+
